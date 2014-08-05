@@ -1,0 +1,39 @@
+md /test1
+rd /test1
+sf /file1.txt 53685
+sf /file2.txt 82591
+md /data
+md /date/tables
+md /data/tables
+sf /data/tables/table1.tab 82717
+rf /file1.txt
+rd /data
+rf /data/tables/table1.tab
+rd /data/tables
+md /data
+md /data/tables
+sf /data/tables/table2.tab 965417
+md /crimes
+md /crimes/blackmail
+sf /crimes/blackmail/juicy_video.wmv  1568748
+md /crimes/gambling
+sf /crimes/gambling/bets.xls  268743
+sf /crimes/gambling/clients.mdb 685742
+sf /crimes/gambling/ledger_for_irs.xls 8265742
+sf /crimes/gambling/real_ledger.xls 5239741
+sf /crimes/blackmail/phone_call01.au 821654
+sf /crimes/blackmail/more_video.wmv 2548965
+md /class_stuff
+md /class_stuff/notes/files/filesandnotes/other
+sf /class_stuff/exercise01.docx 45851
+sf /class_stuff/exercise02.docx 6584
+sf /class_stuff/homework_papers.zip   22658742
+rf /crimes/gambling/bets.xls
+sf /class_stuff/project02.docx 8054850
+rf /crimes/gambling/ledger_for_irs.xls 
+md /class_stuff/notes
+md /class_stuff/notes/trees
+md /class_stuff/notes/trees/avl
+sf /class_stuff/notes/trees/avl/lecturenotes.ppt 1254698
+
+

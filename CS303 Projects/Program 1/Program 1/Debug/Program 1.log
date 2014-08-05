@@ -1,0 +1,26 @@
+﻿Build started 6/23/2013 3:40:59 PM.
+     1>Project "C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Program 1\Program 1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\..\..\Summer '13\CS303\Programs\Program 1\Program 1\Carnivore.cpp" "..\..\..\..\..\Summer '13\CS303\Programs\Program 1\Program 1\Herbivore.cpp" "..\..\..\..\..\Summer '13\CS303\Programs\Program 1\Program 1\Organism.cpp" "..\..\..\..\..\Summer '13\CS303\Programs\Program 1\Program 1\Plant.cpp" "..\..\..\..\..\Summer '13\CS303\Programs\Program 1\Program 1\Source.cpp"
+         Source.cpp
+     1>c:\users\harris\google drive\summer '13\cs303\programs\program 1\program 1\herbivore.h(2): warning C4005: 'MAX_SIZE' : macro redefinition
+                 c:\users\harris\google drive\summer '13\cs303\programs\program 1\program 1\carnivore.h(2) : see previous definition of 'MAX_SIZE'
+     1>c:\users\harris\google drive\summer '13\cs303\programs\program 1\program 1\source.cpp(39): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Plant.cpp
+         Organism.cpp
+         Herbivore.cpp
+         Carnivore.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Debug\Program 1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Debug\Program 1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Debug\Program 1.lib" /MACHINE:X86 Debug\Carnivore.obj
+         Debug\Herbivore.obj
+         Debug\Organism.obj
+         Debug\Plant.obj
+         Debug\Source.obj
+         Program 1.vcxproj -> C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Debug\Program 1.exe
+     1>Done Building Project "C:\Users\Harris\Google Drive\Summer '13\CS303\Programs\Program 1\Program 1\Program 1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.59

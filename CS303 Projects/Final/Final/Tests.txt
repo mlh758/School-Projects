@@ -1,0 +1,39 @@
+----Testing Naive Algorithms----
+Identical Items:
+NaiveMergeSort
+16.345
+Sorted Items:
+NaiveMergeSort
+16.075
+Random Items:
+NaiveMergeSort
+20.94
+Identical Items:
+NaiveQuickSort
+2.899
+Sorted Items:
+NaiveQuickSort
+2.896
+Random Items:
+NaiveQuickSort
+2.415
+
+----Testing Multithreaded Algorithms----
+Identical Items:
+MergeSort
+15.087
+Sorted Items:
+MergeSort
+15.139
+Random Items:
+MergeSort
+19.737
+Identical Items:
+QuickSort
+0.101
+Sorted Items:
+QuickSort
+0.125
+Random Items:
+QuickSort
+4.065
