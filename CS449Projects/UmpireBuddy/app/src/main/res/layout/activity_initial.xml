@@ -1,0 +1,59 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Initial">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ball_button"
+            android:onClick="sendBall"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/strike_button"
+            android:onClick="sendStrike"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:autoText="false"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:text="@string/ball_display" />
+        <TextView android:autoText="false"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:id="@+id/ball_count"
+            android:text="0"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView android:autoText="false"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:text="@string/strike_display"/>
+        <TextView android:autoText="false"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:id="@+id/strike_count"
+            android:text="0"/>
+
+    </TableRow>
+
+
+</TableLayout>

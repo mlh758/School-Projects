@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UmpireBuddy</string>
+    <string name="ball_button">Ball</string>
+    <string name="strike_button">Strike</string>
+    <string name="action_settings">Settings</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="ball_display">Balls:</string>
+    <string name="strike_display">Strikes:</string>
+
+</resources>
