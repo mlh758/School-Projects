@@ -2,15 +2,12 @@ package com.example.osiri_000.umpirebuddy;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Message;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.app.AlertDialog;
 import android.widget.TextView;
 
 
@@ -48,11 +45,31 @@ public class Initial extends Activity {
 
     public void sendBall(View view) {
         AlertDialog showBall = MessageBuilder(this, "Ball", 1);
+        final Context sender = this;
+        showBall.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                if(balls==4){
+                    AlertDialog showOut = MessageBuilder(sender, "WALK!", 3);
+                    showOut.show();
+                }
+            }
+        });
         showBall.show();
     }
 
     public void sendStrike(View view) {
-        AlertDialog showStrike = MessageBuilder(this, "Strike", 0);
+        final Context sender = this;
+        AlertDialog showStrike = MessageBuilder(sender, "Strike", 0);
+        showStrike.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                if(strikes==3){
+                    AlertDialog showOut = MessageBuilder(sender, "OUT!", 3);
+                    showOut.show();
+                }
+            }
+        });
         showStrike.show();
     }
 
@@ -78,8 +95,8 @@ public class Initial extends Activity {
                 builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         balls += 1;
-                        TextView strikeValue = (TextView) findViewById(R.id.ball_count);
-                        strikeValue.setText(Integer.toString(balls));
+                        TextView ballValue = (TextView) findViewById(R.id.ball_count);
+                        ballValue.setText(Integer.toString(balls));
                     }
                 });
                 break;
@@ -87,8 +104,13 @@ public class Initial extends Activity {
                 //Walk or Out, reset the counts
                 builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        TextView ballValue = (TextView) findViewById(R.id.ball_count);
+                        TextView strikeValue = (TextView) findViewById(R.id.strike_count);
                         balls = 0;
                         strikes = 0;
+                        ballValue.setText("0");
+                        strikeValue.setText("0");
+
                     }
                 });
                 break;
