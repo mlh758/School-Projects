@@ -44,85 +44,67 @@ public class Initial extends Activity {
     }
 
     public void sendBall(View view) {
-        AlertDialog showBall = MessageBuilder(this, "Ball", 1);
-        final Context sender = this;
-        showBall.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-                if(balls==4){
-                    AlertDialog showOut = MessageBuilder(sender, "WALK!", 3);
-                    showOut.show();
+        //Handler for ball event
+        balls++;
+        UpdateDisplay();
+        if (balls == 4) {
+            AlertDialog dialog = MessageBuilder(this, getString(R.string.walk_msg));
+            dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    ResetDisplay();
                 }
-            }
-        });
-        showBall.show();
+            });
+
+            dialog.show();
+
+        }
+
     }
 
     public void sendStrike(View view) {
-        final Context sender = this;
-        AlertDialog showStrike = MessageBuilder(sender, "Strike", 0);
-        showStrike.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialogInterface) {
-                if(strikes==3){
-                    AlertDialog showOut = MessageBuilder(sender, "OUT!", 3);
-                    showOut.show();
+        //Handler for strike event
+        strikes++;
+        UpdateDisplay();
+        if(strikes == 3){
+            AlertDialog dialog = MessageBuilder(this,getString(R.string.out_msg) );
+            dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    ResetDisplay();
                 }
-            }
-        });
-        showStrike.show();
+            });
+            dialog.show();
+        }
     }
 
 
 
 
-    private AlertDialog MessageBuilder(Context sender, CharSequence message, int level){
+    private AlertDialog MessageBuilder(Context sender, CharSequence message){
+        //Function for building messages in event handlers above
         AlertDialog.Builder builder = new AlertDialog.Builder(sender);
         builder.setMessage(message);
-        switch(level) {
-            case 0:
-                //Building Strike Dialog
-                builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        strikes += 1;
-                        TextView strikeValue = (TextView) findViewById(R.id.strike_count);
-                        strikeValue.setText(Integer.toString(strikes));
-                    }
-                });
-                break;
-            case 1:
-                //Building Ball Dialog
-                builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        balls += 1;
-                        TextView ballValue = (TextView) findViewById(R.id.ball_count);
-                        ballValue.setText(Integer.toString(balls));
-                    }
-                });
-                break;
-            default:
-                //Walk or Out, reset the counts
-                builder.setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        TextView ballValue = (TextView) findViewById(R.id.ball_count);
-                        TextView strikeValue = (TextView) findViewById(R.id.strike_count);
-                        balls = 0;
-                        strikes = 0;
-                        ballValue.setText("0");
-                        strikeValue.setText("0");
-
-                    }
-                });
-                break;
-        }
-        builder.setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                // User cancelled the dialog
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //Do nothing, just acknowledge the dialog
             }
         });
-
         return builder.create();
         }
+
+    private void UpdateDisplay(){
+        TextView ballValue = (TextView) findViewById(R.id.ball_count);
+        TextView strikeValue = (TextView) findViewById(R.id.strike_count);
+        strikeValue.setText(Integer.toString(strikes));
+        ballValue.setText(Integer.toString(balls));
+    }
+
+    private void ResetDisplay(){
+        balls = strikes = 0;
+        UpdateDisplay();
+    }
 
 }
 

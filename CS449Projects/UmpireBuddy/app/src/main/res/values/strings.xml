@@ -9,5 +9,9 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="ball_display">Balls:</string>
     <string name="strike_display">Strikes:</string>
+    <string name="walk_msg">Walk!</string>
+    <string name="out_msg">Out!</string>
+    <string name="title_activity_about">About</string>
+    <string name="about_msg">Umpire Buddy 2.0 by Michael Harris</string>
 
 </resources>
