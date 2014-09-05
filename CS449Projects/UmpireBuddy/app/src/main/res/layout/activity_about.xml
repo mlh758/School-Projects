@@ -9,6 +9,7 @@
     tools:context="com.example.osiri_000.umpirebuddy.About">
 
     <TextView
+        android:id="@+id/about_string"
         android:text="@string/about_msg"
         android:textSize="18pt"
         android:layout_width="wrap_content"

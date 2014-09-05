@@ -44,6 +44,9 @@ public class Initial extends Activity {
                 Intent intent = new Intent(Initial.this, About.class);
                 startActivity(intent);
                 return true;
+            case R.id.action_reset:
+                ResetDisplay();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -9,4 +9,9 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item android:id="@+id/action_reset"
+        android:orderInCategory="50"
+        android:showAsAction="always"
+        android:title="@string/reset_menu"
+        android:icon="@drawable/ic_reset" />
 </menu>

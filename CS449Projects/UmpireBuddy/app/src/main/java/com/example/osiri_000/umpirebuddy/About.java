@@ -2,16 +2,23 @@ package com.example.osiri_000.umpirebuddy;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class About extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        TextView textView = (TextView) findViewById(R.id.about_string);
+        registerForContextMenu(textView);
     }
 
 
@@ -32,5 +39,33 @@ public class About extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.about_context, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.action_info:
+                showToast("Secret message!");
+                return true;
+            case R.id.action_message:
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+
+    }
+
+    public void showToast(String message) {
+
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
+
+        toast.show();
+
     }
 }

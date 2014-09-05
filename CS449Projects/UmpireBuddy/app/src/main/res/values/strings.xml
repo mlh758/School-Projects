@@ -14,5 +14,8 @@
     <string name="title_activity_about">About</string>
     <string name="about_msg">Umpire Buddy 2.0 by Michael Harris</string>
     <string name="about_menu">About</string>
+    <string name="reset_menu">Reset</string>
+    <string name="info_menu">More Info</string>
+    <string name="msg_menu">Message</string>
 
 </resources>
