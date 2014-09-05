@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,14 +17,41 @@ public class Initial extends Activity {
 
     private int balls;
     private int strikes;
+    private int outs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial);
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        outs = sharedPref.getInt(getString(R.string.total_outs), 0);
         balls = 0;
         strikes = 0;
     }
 
+    @Override
+    protected void onDestroy() {
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor prefEditor = sharedPref.edit();
+        prefEditor.putInt(getString(R.string.total_outs), outs);
+        prefEditor.commit();
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt("Strikes", strikes);
+        outState.putInt("Balls", balls);
+        outState.putInt("Outs", outs);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        strikes = savedInstanceState.getInt("Strikes");
+        balls = savedInstanceState.getInt("Balls");
+        outs = savedInstanceState.getInt("Outs");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -76,6 +104,7 @@ public class Initial extends Activity {
         strikes++;
         UpdateDisplay();
         if(strikes == 3){
+            outs++;
             AlertDialog dialog = MessageBuilder(this,getString(R.string.out_msg) );
             dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override

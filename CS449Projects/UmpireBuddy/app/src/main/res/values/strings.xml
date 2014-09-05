@@ -17,5 +17,6 @@
     <string name="reset_menu">Reset</string>
     <string name="info_menu">More Info</string>
     <string name="msg_menu">Message</string>
+    <string name="total_outs">Outs</string>
 
 </resources>
