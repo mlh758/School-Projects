@@ -55,5 +55,24 @@
 
     </TableRow>
 
+    <TableRow
+        android:paddingTop="36dp">
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:textSize="18pt"
+            android:text="@string/out_display"/>
+        <TextView android:id="@+id/out_count"
+            android:layout_weight="1"
+            android:textSize="18pt"
+            />
+        </TableRow>
+
 
 </TableLayout>

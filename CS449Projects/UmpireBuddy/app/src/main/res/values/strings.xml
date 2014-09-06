@@ -18,5 +18,6 @@
     <string name="info_menu">More Info</string>
     <string name="msg_menu">Message</string>
     <string name="total_outs">Outs</string>
+    <string name="out_display">Total Outs:</string>
 
 </resources>

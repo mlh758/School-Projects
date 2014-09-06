@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,15 +24,16 @@ public class Initial extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_initial);
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("pref_general", Context.MODE_PRIVATE);
         outs = sharedPref.getInt(getString(R.string.total_outs), 0);
         balls = 0;
         strikes = 0;
+        UpdateDisplay();
     }
 
     @Override
     protected void onDestroy() {
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("pref_general", Context.MODE_PRIVATE);
         SharedPreferences.Editor prefEditor = sharedPref.edit();
         prefEditor.putInt(getString(R.string.total_outs), outs);
         prefEditor.commit();
@@ -51,6 +54,8 @@ public class Initial extends Activity {
         strikes = savedInstanceState.getInt("Strikes");
         balls = savedInstanceState.getInt("Balls");
         outs = savedInstanceState.getInt("Outs");
+        SharedPreferences defaults = PreferenceManager.getDefaultSharedPreferences(this);
+        UpdateDisplay();
     }
 
     @Override
@@ -67,6 +72,8 @@ public class Initial extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch(item.getItemId()){
             case R.id.action_settings:
+                Intent settingsIntent = new Intent(Initial.this, SettingsActivity.class);
+                startActivity(settingsIntent);
                 return true;
             case R.id.action_about:
                 Intent intent = new Intent(Initial.this, About.class);
@@ -94,6 +101,12 @@ public class Initial extends Activity {
             });
 
             dialog.show();
+            SharedPreferences defaults = PreferenceManager.getDefaultSharedPreferences(this);
+            if(defaults.getBoolean("walk_audio_pref", false)){
+                MediaPlayer player = MediaPlayer.create(Initial.this, R.raw.walk);
+                player.start();
+            }
+
 
         }
 
@@ -112,7 +125,14 @@ public class Initial extends Activity {
                     ResetDisplay();
                 }
             });
+
             dialog.show();
+            SharedPreferences defaults = PreferenceManager.getDefaultSharedPreferences(this);
+            if(defaults.getBoolean("out_audio_pref", false)){
+                MediaPlayer player = MediaPlayer.create(Initial.this, R.raw.out);
+                player.start();
+            }
+
         }
     }
 
@@ -137,8 +157,10 @@ public class Initial extends Activity {
     private void UpdateDisplay(){
         TextView ballValue = (TextView) findViewById(R.id.ball_count);
         TextView strikeValue = (TextView) findViewById(R.id.strike_count);
+        TextView outValue = (TextView) findViewById(R.id.out_count);
         strikeValue.setText(Integer.toString(strikes));
         ballValue.setText(Integer.toString(balls));
+        outValue.setText(Integer.toString(outs));
     }
 
     private void ResetDisplay(){
