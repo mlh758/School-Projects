@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
+//REMEMBER TO CHECK OUT onPause METHOD
 public class Initial extends Activity {
 
     private int balls;

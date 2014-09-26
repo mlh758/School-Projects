@@ -19,5 +19,6 @@
     <string name="msg_menu">Message</string>
     <string name="total_outs">Outs</string>
     <string name="out_display">Total Outs:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

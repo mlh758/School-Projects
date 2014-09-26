@@ -1,0 +1,147 @@
+The following actors do not have a Clooney Number: 
+    Adam West           
+    Alan Hewitt         
+    Annette Andre       
+    Annette Funicello   
+    Billy Dee Williams  
+    Billy Gilbert       
+    Burgess Meredith    
+    Burt Ward           
+    Buster Keaton       
+    Carroll O'Connor    
+    Cesar Romero        
+    Charles Bronson     
+    Charles Chaplin     
+    Charles Rogers      
+    Cheech Marin        
+    Clara Bow           
+    Clarence Muse       
+    Clint Eastwood      
+    Darrow Igus         
+    Deborah Walley      
+    Don Rickles         
+    Donald Sutherland   
+    Douglas Rain        
+    Elizabeth Hurley    
+    Emma Dunn           
+    Ernest Borgnine     
+    Frances Raymond     
+    Frank Gorshin       
+    Frank Webb          
+    Frankie Avalon      
+    Fred Gwynne         
+    Gary Lockwood       
+    Gavin MacLeod       
+    Geoffrey Palmer     
+    George Carlin       
+    George Kennedy      
+    Glenne Headly       
+    Harvey Clark        
+    Harvey Lembeck      
+    Henry Daniell       
+    Jack Gilford        
+    Jack LaLanne        
+    Jack Nicholson      
+    Jack Oakie          
+    Jack Palance        
+    James Spinks        
+    Jamie Lee Curtis    
+    Jennifer Lewis      
+    Joe Flynn           
+    Joe Pesci           
+    John Cleese         
+    Josef Swickard      
+    Josephine Dunn      
+    Keir Dullea         
+    Kevin Kline         
+    Kim Basinger        
+    Kurt Russell        
+    Lee Marvin          
+    Lee Meriwether      
+    Linda Evans         
+    Maria Atkin         
+    Marisa Tomei        
+    Michael Caine       
+    Michael Keaton      
+    Michael Palin       
+    Michael York        
+    Mike Myers          
+    Nicole Kidman       
+    Otis Day            
+    Owen Wilson         
+    Paul Lynde          
+    Paul Newman         
+    Paulette Goddard    
+    Phil Silvers        
+    Ralph Macchio       
+    Richard Pryor       
+    Robert Wagner       
+    Robert Wuhl         
+    Seth Green          
+    Shirley MacLaine    
+    Steve Martin        
+    Telly Savalas       
+    Will Ferrell        
+    William Sylvester   
+    Zero Mostel         
+
+The following actors have a Clooney Number of 0:
+    George Clooney      
+
+The following actors have a Clooney Number of 1:
+    Angie Dickinson     
+    Brad Pitt           
+    Carl Reiner         
+    Casey Affleck       
+    David Strathaim     
+    Elliot Gould        
+    Frank Langella      
+    Jason Bateman       
+    Julia Roberts       
+    Robert Downey Jr    
+    Sam Elliott         
+    Steve Lawrence      
+    Wayne Newton        
+
+The following actors have a Clooney Number of 2:
+    Gwyneth Paltrow     
+    Jeff Bridges        
+    John Goodman        
+    Julianne Moore      
+
+The following actors have a Clooney Number of 3:
+    Christina Ricci     
+    Susan Sarandon      
+
+The following actors have a Clooney Number of 4:
+    Anjelica Huston     
+    Charles Gray        
+    Christopher Lloyd   
+    Meat Loaf           
+    Patricia Quinn      
+    Raul Julia          
+    Richard O'Brien     
+    Tim Curry           
+
+The following actors have a Clooney Number of 5:
+    Crispin Glover      
+    Desmond Llewelyn    
+    Jill St John        
+    Lana Wood           
+    Michael J Fox       
+    Sean Connery        
+
+The following actors have a Clooney Number of 6:
+    Andy Tennant        
+    David Naughton      
+    Eddie Albert        
+    Fabian              
+    Paul Anka           
+    Peter Lawford       
+    Richard Burton      
+    Roddy McDowall      
+
+The following actors have a Clooney Number of 7:
+    Edgar Barrier       
+    Jeanette Nolan      
+    Orson Welles        
